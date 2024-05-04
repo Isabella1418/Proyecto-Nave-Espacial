@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50vmin;
   pointer-events: none;
 }
 
@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0055ff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(230, 230, 230);
 }
 
 .App-link {
@@ -39,4 +39,67 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+/* styles.css */
+
+/* Container for the game */
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c31a66;
+  overflow: hidden;
+}
+
+/* Ship SVG */
+.ship {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Bullets */
+.bullet {
+  position: absolute;
+  width: 1%;
+  /* Adjust bullet width as needed */
+  height: 1px;
+  /* Adjust bullet height as needed */
+  background-color: #000000;
+  /* White color */
+  animation: bulletAnimation 1s linear;
+  /* Bullet animation */
+}
+
+/* Obstacles */
+.obstacle {
+  position: absolute;
+  width: 25px;
+  /* Adjust obstacle width as needed */
+  height: 40px;
+  /* Adjust obstacle height as needed */
+  background-color: rgb(0, 0, 0);
+  /* Red color */
+  color: #ffea00;
+  /* White color */
+  font-size: 1ch;
+  text-align: derecho;
+}
+
+.hits {
+  font-size: 0.9rem;
+  margin-top: 8ch;
+}
+
+/* Bullet animation */
+@keyframes bulletAnimation {
+  from {
+    transform: translateY(100vh);
+    /* Start from bottom of the container */
+  }
+
+  to {
+    transform: translateY(0);
+    /* Move to the top of the container */
+  }
+
 }
